@@ -1,8 +1,11 @@
+export LANG=en_GB.UTF-8
 export CC=/usr/bin/gcc-4.2
-export PATH=~/bin:$HOME/.rvm/bin:/usr/local/bin:$PATH
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 source ~/.rvm/scripts/rvm
 __rvm_project_rvmrc
+
+export EDITOR=subl
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="k-m"
@@ -11,6 +14,7 @@ plugins=(git rvm osx)
 source $ZSH/oh-my-zsh.sh
 
 alias rezsh="vim ~/.zshrc && source ~/.zshrc"
+alias rework="vim ~/.work_profile && source ~/.work_profile"
 
 alias m+='nohup memcached -vv > log/memcached.log &'
 alias m-='killall memcached'
@@ -39,6 +43,13 @@ alias gpp='gp && git push'
 alias gre='g rebase'
 alias grem='gre master'
 alias grm='g rm'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+
+alias pw="ruby -e 'puts (((\"A\"..\"Z\").to_a.join.tap{|l| l<<l.downcase} << \"!@$%^&*()1234567890,.<>;:{}[]-=_+\")*5).split(\"\").shuffle.first(18).join'"
+
+export MAGICK_HOME=/usr/local/Cellar/imagemagick/6.7.5-7/
+export PATH=$PATH:$MAGICK_HOME/bin
+export DYLD_LIBRARY_PATH=$MAGICK_HOME/lib
 
 # secret aliases
 [[ -s $HOME/.work_profile ]] && source $HOME/.work_profile
