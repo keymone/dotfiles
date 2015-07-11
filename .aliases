@@ -1,0 +1,20 @@
+githubget() {
+  curl -L https://github.com/$1/$2/archive/$3.tar.gz | tar -zx && mv $2-$3* $4
+}
+
+alias vmz='rm -rf ~/.vim; mkdir -p ~/.vim/bundle; githubget gmarik Vundle.vim cfd3b2d3 ~/.vim/bundle/Vundle.vim; vim +PluginInstall'
+alias omz='rm -rf ~/.oh-my-zsh; githubget keymone oh-my-zsh 27351d3c ~/.oh-my-zsh && source ~/.zshrc'
+alias tm='tmux'
+alias ta='tmux attach'
+
+alias gs='git status'
+alias gd='git diff --color'
+alias gdc='git diff --color --cached'
+alias ga='git add'
+alias gc='git commit'
+alias gco='git checkout'
+alias grm='git rm'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+alias gb="git branch"
+alias gp="git pull --rebase"
+alias gpp="git pull --rebase && git push"
