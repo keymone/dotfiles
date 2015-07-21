@@ -18,3 +18,9 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gb="git branch"
 alias gp="git pull --rebase"
 alias gpp="git pull --rebase && git push"
+
+alias be='bundle exec'
+alias br='be rake'
+alias bs='be rspec'
+alias brs='ber spec'
+alias vim='nvim'
