@@ -22,6 +22,8 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'rking/ag.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'bogado/file-line'
+Plugin 'guns/vim-clojure-static'
+Plugin 'vim-scripts/paredit.vim'
 
 call vundle#end()
 
@@ -95,11 +97,9 @@ nnoremap <Leader>. :CtrlPMRU<CR>
 " < ag >
 nnoremap <Leader>/ :Ag<space>
 
-" < cursor shape in insert mode >
-if exists('$TMUX')
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
+" <clojure>
+let g:clojure_maxlines = 0
+
+" <terminal>
+nnoremap ,t :terminal<cr>
+tnoremap <Esc> <C-\><C-n>
