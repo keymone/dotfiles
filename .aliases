@@ -4,8 +4,8 @@ githubget() {
 
 alias vmz='rm -rf ~/.vim; mkdir -p ~/.vim/bundle; githubget gmarik Vundle.vim cfd3b2d3 ~/.vim/bundle/Vundle.vim; vim +PluginInstall'
 alias omz='rm -rf ~/.oh-my-zsh; githubget keymone oh-my-zsh 27351d3c ~/.oh-my-zsh && source ~/.zshrc'
-alias tm='tmux'
-alias ta='tmux attach'
+alias tm='TERM=xterm-256color tmux'
+alias ta='TERM=xterm-256color tmux attach -d'
 
 alias gs='git status'
 alias gd='git diff --color'
@@ -23,4 +23,3 @@ alias be='bundle exec'
 alias br='be rake'
 alias bs='be rspec'
 alias brs='ber spec'
-alias vim='nvim'
