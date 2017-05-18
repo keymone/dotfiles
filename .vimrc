@@ -8,7 +8,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'tomasr/molokai'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -24,6 +23,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'bogado/file-line'
 Plugin 'guns/vim-clojure-static'
 Plugin 'vim-scripts/paredit.vim'
+Plugin 'altercation/vim-colors-solarized.git'
 
 call vundle#end()
 
@@ -31,7 +31,8 @@ filetype plugin indent on
 
 " < general >
 syntax on
-colorscheme molokai
+set background=dark
+colorscheme solarized
 
 set expandtab
 set tabstop=2
@@ -102,4 +103,4 @@ let g:clojure_maxlines = 0
 
 " <terminal>
 nnoremap ,t :terminal<cr>
-tnoremap <Esc> <C-\><C-n>
+"tnoremap <Esc> <C-\><C-n>
