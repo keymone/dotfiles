@@ -8,7 +8,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'xolox/vim-misc'
@@ -48,13 +47,6 @@ set listchars=tab:▸\ ,eol:¬
 set expandtab
 set fillchars+=vert:\│
 set laststatus=2
-
-" < airline >
-let g:airline_detect_paste=1
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_left_sep=''
-let g:airline_right_sep=''
 
 " < nerdtree >
 let g:nerdtree_tabs_open_on_console_startup = 0

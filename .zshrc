@@ -37,7 +37,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -82,5 +82,8 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[ -d "$ZSH"       ] && source $ZSH/oh-my-zsh.sh
-[ -f "$HOME/.env" ] && source $HOME/.env
+if [ -d "$ZSH" ]; then
+  source $ZSH/oh-my-zsh.sh
+  export PROMPT='%{$fg_bold[green]%}%~ %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+  export RPROMPT="%{$fg_bold[blue]%}%(1j.%j.)%{$reset_color%}"
+fi
